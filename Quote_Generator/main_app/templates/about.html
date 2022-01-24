@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
-  <body>
+  <body id="home" class="scrollspy">
       <div class="navbar-fixed">
           <nav class=teal>
           <div class="container">
@@ -85,6 +85,25 @@
             </ul>
       </section>
 
+      <!--Section Search-->
+      <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+          <div class="container">
+              <div class="row">
+                  <div class="col s12">
+                      <h3>Whatever</h3>
+                      <div class="input-field">
+                          <input type="text" class="white grey-text
+                           autocomplete" id="autocomplete-input"
+                           placeholder="Example, Example, Example">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!--Section: Icon Boxes-->
+      section.section.
+
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -101,6 +120,18 @@
             height: 500,
             transition: 500,
             interval: 6000
+        });
+
+        // Autocomplete
+        const ac = document.querySelector
+        ('.autocomplete');
+        M.Autocomplete.init(ac, {
+            data: {
+                "Something": null,
+                "Something": null,
+                "Something": null,
+                "Something": null,
+            }
         });
     </script>
   </body>

@@ -30,3 +30,23 @@ def signup_view(request):
     else:
         form = UserCreationForm()
         return render(request, 'signup.html', {'form': form})
+
+######################### Login #########################
+
+def login_view(request):
+    if request.method =="POST":
+        form = AuthenticationForm(request, request.POST)
+        if form.is_valid():
+            u = form.cleaned_data['username']
+            p = form.cleaned_data['password']
+            user = authenticate(username = u, password = p)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponseRedirect('/user/'+str(user))
+                else:print('The account has been disable YOU SCOUNDREL')
+        else:
+            print('The username and/or password is incorrect. You are less of a scoundrel')
+    else:
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form':form})

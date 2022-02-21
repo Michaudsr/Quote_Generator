@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Quotegenerator',
-        'User': 'quotegeneratoruser',
+        'USER': 'root',
         'PASSWORD': 'Quotegenerator22!',
         'HOST': 'localhost',
         'PORT': '',
